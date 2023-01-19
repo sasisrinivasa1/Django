@@ -1,0 +1,15 @@
+{% extends 'mycode.html' %}
+
+{% block content %}
+    
+<!-- adding method=post to not display values in the url -->
+<form action="add/", method="post">  
+
+<!-- this csrf_token is used to secure the data -->
+    {% csrf_token %} 
+    Enter 1st Number = <input type="number" name="n1"><br>
+    Enter 2nd Number = <input type="number" name="n2"><br>
+    <input type="submit"> 
+</form>
+
+{% endblock %}
