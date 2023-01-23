@@ -32,7 +32,7 @@ def register(request):
             if User.objects.filter(username=username).exists():
                 messages.info(request,'Username Already taken')
                 return redirect('register')
-            elif User.objects.filter(email=email):
+            elif User.objects.filter(email=email).exists:
                 messages.info(request,'email already taken') 
                 return redirect('register')               
             else:
