@@ -3,6 +3,6 @@ Hi {{user.username}},
 
 Please click the link below to verify the account
 
-{{domain}}/{% url '' activate uidb64=uid token=token %}
+http//{{domain}}/{% url 'activate' uidb64=uid token=token %}
 
 {% endautoescape %}

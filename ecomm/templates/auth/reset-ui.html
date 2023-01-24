@@ -1,0 +1,7 @@
+{% autoescape off %}
+Hi {{user.username}}
+
+Please click on the below link to reset the password
+http//{{domain}}{% url 'reset-password' uidb64=uid token=token %}
+
+{% endautoescape %}

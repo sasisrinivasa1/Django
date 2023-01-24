@@ -1,6 +1,6 @@
 {% extends 'nav.html' %}
 
-{% block title %} Login to your account  {% endblock title %}
+{% block title %} Reset the password {% endblock title %}
 {% block h1 %}<b>Transformer<b/>{% endblock h1 %}
 {% block form %}
 {% for message in messages %}
@@ -11,20 +11,15 @@
   <button type="button" clas="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 {% endfor %}
-<h1> <b>Login</b> </h1>
-<form action="/ec/login/" method="post">
+<h1> <b>Reset Password</b> </h1>
+<form action="/ec/forgot-password/" method="post">
   {% csrf_token %}
   <label for="username">Username</label>
   <div class="form-group">
     <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username" required>
   </div><br>
-  <label for="pass">Password</label>
-  <div class="form-group">
-    <input type="password" class="form-control" id="pass" name="pass" placeholder="Enter Password" required>
-  </div><br>
-  <button type="SignIn" class="btn btn-dark btn-sm btn-block">SignIn</button>
-  <br>
-  Not an User? <a href="/ec/signup">Signup</a><br>
-  <a href="/ec/forgot-password">Forgot Password?</a>
+  <button type="submit" class="btn btn-dark btn-sm btn-block">Submit</button>
+  <br><br>
+  <a href="/ec/login">Go Back</a><br>
 </form>
 {% endblock form %}

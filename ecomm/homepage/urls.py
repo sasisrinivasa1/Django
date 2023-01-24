@@ -6,5 +6,7 @@ urlpatterns = [
     path('signup/', views.handlesignup, name='handlesignup'),
     path('login/', views.handlelogin, name='handlelogin'),
     path('logout/', views.handlelogout, name='handlelogout'),
-    path('activate/<uid>/<token>', views.ActivateAccountView.as_views(), name='activate'),
+    path('activate/<uidb64>/<token>', views.ActivateAccountView.as_view(), name='activate'),
+    path('forgot-password/', views.resetpassword, name='resetpassword'),
+    path('reset-password/<uidb64>/<token>/', views.ResetPasswordView.as_view(), name='reset-password'),
 ]
